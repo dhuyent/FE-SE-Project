@@ -1,0 +1,50 @@
+<section class="player-profile-add">
+    <h2 class="player-profile-add__heading">Hồ sơ cầu thủ</h2>
+    <form class="player-form">
+        <!-- Tên cầu thủ -->
+        <div class="form-group">
+            <label for="player-name">Tên cầu thủ</label>
+            <input type="text" id="player-name" name="player-name" placeholder="Nhập tên cầu thủ">
+        </div>
+
+        <!-- Đội -->
+        <div class="form-group">
+            <label for="team">Đội</label>
+            <select id="team" name="team">
+                <option value="">Chọn đội</option>
+                <!-- Các đội bóng sẽ được liệt kê ở đây -->
+                <option value="team1">Đội 1</option>
+                <option value="team2">Đội 2</option>
+                <option value="team3">Đội 3</option>
+            </select>
+        </div>
+
+        <!-- Ngày sinh (từ 16 tới 40 tuổi) -->
+        <div class="form-group">
+            <label for="birth-date">Ngày sinh</label>
+            <input type="date" id="birth-date" name="birth-date" min="1984-01-01" max="2008-12-31">
+        </div>
+
+        <!-- Loại cầu thủ (Trong nước/Ngoài nước) -->
+        <div class="form-group">
+            <label for="player-type">Loại cầu thủ</label>
+            <select id="player-type" name="player-type">
+                <option value="">Chọn loại cầu thủ</option>
+                <option value="domestic">Trong nước</option>
+                <option value="foreign">Ngoài nước</option>
+            </select>
+        </div>
+
+        <!-- Ghi chú -->
+        <div class="form-group">
+            <label for="notes">Ghi chú</label>
+            <input type="text" id="notes" name="notes" placeholder="Nhập vị trí trong đội">
+        </div>
+
+        <!-- Hành động -->
+        <div class="player-actions">
+            <button type="submit" class="save-btn">Lưu thông tin</button>
+            <a href="#" class="edit-link">Chỉnh sửa</a>
+        </div>
+    </form>
+</section>

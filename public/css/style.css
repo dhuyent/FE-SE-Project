@@ -180,6 +180,78 @@ textarea {
   background-color: var(--gray-light);
 }
 
+/* Dropdown menu styling */
+.profile-dropdown {
+  position: relative;
+}
+
+.profile-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.profile-dropdown .dropdown-content li {
+  padding: 10px;
+  position: relative;
+}
+
+.profile-dropdown .dropdown-content li a {
+  text-decoration: none;
+  display: block;
+  color: var(--black);
+  padding: 10px;
+}
+
+.profile-dropdown .dropdown-content li a:hover {
+  background-color: var(--gray-light);
+}
+
+/* Submenu styling */
+.profile-dropdown .dropdown-subcontent {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.profile-dropdown .dropdown-content li:hover .dropdown-subcontent {
+  display: block;
+}
+
+.profile-dropdown .dropdown-subcontent li {
+  padding: 10px;
+}
+
+.profile-dropdown .dropdown-subcontent li a {
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  color: var(--black);
+}
+
+.profile-dropdown .dropdown-subcontent li a:hover {
+  background-color: var(--gray-light);
+}
+
 /* Author - HomePage */
 .author {
   padding: 10px 0;
@@ -195,9 +267,9 @@ textarea {
   font-size: var(--font-size-md);
   margin: 5px 0 40px 0;
 }
-  
+
 /* Tournament Profile Section */
-.tournament-profile {
+.tournament-profile-add {
   margin-top: 4rem;
   padding: 20px;
   background-color: white;
@@ -205,7 +277,7 @@ textarea {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.tournament-profile__heading {
+.tournament-profile-add__heading {
   margin-bottom: 20px;
   font-size: var(--font-size-lg);
   font-weight: 600;
@@ -283,81 +355,164 @@ textarea {
 .edit-link:hover {
   text-decoration: underline;
 }
-  
-  /* Footer */
-  .footer {
-    margin: 4rem;
-    text-align: center;
-  }
 
-  /* Dropdown menu styling */
-.profile-dropdown {
-  position: relative;
-}
-
-.profile-dropdown .dropdown-content {
-  display: none;
-  position: absolute;
+/* Team Profile Section */
+.team-profile-add {
+  margin-top: 4rem;
+  padding: 20px;
   background-color: white;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
-  z-index: 1;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.profile-dropdown .dropdown-content li {
-  padding: 10px;
-  position: relative;
-}
-
-.profile-dropdown .dropdown-content li a {
-  text-decoration: none;
-  display: block;
-  color: var(--black);
-  padding: 10px;
-}
-
-.profile-dropdown .dropdown-content li a:hover {
-  background-color: var(--gray-light);
-}
-
-/* Submenu styling */
-.profile-dropdown .dropdown-subcontent {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  background-color: white;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: var(--border-radius);
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.profile-dropdown .dropdown-content li:hover .dropdown-subcontent {
-  display: block;
-}
-
-.profile-dropdown .dropdown-subcontent li {
-  padding: 10px;
-}
-
-.profile-dropdown .dropdown-subcontent li a {
-  padding: 10px;
-  text-decoration: none;
-  display: block;
+.team-profile-add__heading {
+  margin-bottom: 20px;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
   color: var(--black);
 }
 
-.profile-dropdown .dropdown-subcontent li a:hover {
-  background-color: var(--gray-light);
+.team-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.team-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-form .form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.team-form .form-group input[type="text"],
+.team-form .form-group input[type="number"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
+  background-color: #f9f9f9;
+  color: var(--black);
+  width: 100%;
+}
+
+.team-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-actions .save-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--black);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-align: center;
+}
+
+.team-actions .save-btn:hover {
+  background-color: var(--gray);
+}
+
+.team-actions .edit-link {
+  font-size: 1rem;
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.team-actions .edit-link:hover {
+  text-decoration: underline;
+}
+
+/* Player Profile Section */
+.player-profile-add {
+  margin-top: 4rem;
+  padding: 20px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.player-profile-add__heading {
+  margin-bottom: 20px;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--black);
+}
+
+.player-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.player-form .form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.player-form .form-group input[type="text"],
+.player-form .form-group input[type="date"],
+.player-form .form-group select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--border-radius);
+  background-color: #f9f9f9;
+  color: var(--black);
+  width: 100%;
+}
+
+.player-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-actions .save-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--black);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-align: center;
+}
+
+.player-actions .save-btn:hover {
+  background-color: var(--gray);
+}
+
+.player-actions .edit-link {
+  font-size: 1rem;
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.player-actions .edit-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  margin: 4rem;
+  text-align: center;
 }

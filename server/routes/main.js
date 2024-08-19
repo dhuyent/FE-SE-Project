@@ -17,7 +17,25 @@ router.get('/profile/tournament/add', (req, res) => {
         description: 'Trang hồ sơ giải đấu'
     };
 
-    res.render('tournament_profile', { locals });
+    res.render('tournament_profile_add', { locals });
+});
+
+router.get('/profile/team/add', (req, res) => {
+    const locals = {
+        title: 'HỒ SƠ ĐỘI BÓNG',
+        description: 'Trang hồ sơ đội bóng'
+    };
+
+    res.render('team_profile_add', { locals });
+});
+
+router.get('/profile/player', (req, res) => {
+    const locals = {
+        title: 'HỒ SƠ CẦU THỦ',
+        description: 'Trang hồ sơ cầu thủ'
+    };
+
+    res.render('player_profile_add', { locals });
 });
 
 module.exports = router;
