@@ -1,0 +1,32 @@
+<section class="tournament-creation">
+    <h2 class="tournament-creation__heading">Hồ sơ giải đấu</h2>
+    <form class="tournament-form">
+        <div class="form-group">
+            <label for="season-name">Tên mùa giải</label>
+            <input type="text" id="season-name" name="season-name" placeholder="Nhập tên mùa giải">
+        </div>
+
+        <div class="form-group">
+            <label for="start-date">Ngày bắt đầu</label>
+            <input type="date" id="start-date" name="start-date">
+        </div>
+
+        <div class="form-group">
+            <label for="end-date">Ngày kết thúc</label>
+            <input type="date" id="end-date" name="end-date">
+        </div>
+
+        <div class="form-group">
+            <label for="teams">Đội bóng tham dự</label>
+            <select id="teams" name="teams">
+                <option value="">Chọn đội bóng...</option>
+                <!-- Các đội bóng sẽ được liệt kê ở đây -->
+            </select>
+        </div>
+
+        <div class="tournament-actions">
+            <button type="submit" class="save-btn">Lưu thông tin</button>
+            <a href="#" class="edit-link">Chỉnh sửa</a>
+        </div>
+    </form>
+</section>
