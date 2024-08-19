@@ -11,9 +11,9 @@ router.get('', (req, res) => {
     res.render('index', {locals});
 });
 
-router.get('/profile/tournament', (req, res) => {
+router.get('/profile/tournament/add', (req, res) => {
     const locals = {
-        title: 'Hồ Sơ Giải Đấu',
+        title: 'HỒ SƠ GIẢI ĐẤU',
         description: 'Trang hồ sơ giải đấu'
     };
 

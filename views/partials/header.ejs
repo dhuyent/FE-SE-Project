@@ -1,6 +1,6 @@
 <header class="header">
     <a href="/" class="header__logo">QUẢN LÝ GIẢI VÔ ĐỊCH BÓNG ĐÁ QUỐC GIA</a>
-    <nav class = "header__nav">
+    <nav class="header__nav">
         <ul>
             <li>
                 <a href="/" class="">TRANG CHỦ</a>
@@ -8,9 +8,27 @@
             <li class="profile-dropdown">
                 <a href="#" class="">HỒ SƠ ĐĂNG KÝ</a>
                 <ul class="dropdown-content">
-                    <li><a href="/profile/tournament">Giải đấu</a></li>
-                    <li><a href="/profile/team">Đội bóng</a></li>
-                    <li><a href="/profile/player">Cầu thủ</a></li>
+                    <li class="tournament-dropdown">
+                        <a href="#">Giải đấu</a>
+                        <ul class="dropdown-subcontent">
+                            <li><a href="/profile/tournament/add">Thêm giải đấu</a></li>
+                            <li><a href="/profile/tournament/list">Danh sách giải đấu</a></li>
+                        </ul>
+                    </li>
+                    <li class="team-dropdown">
+                        <a href="#">Đội bóng</a>
+                        <ul class="dropdown-subcontent">
+                            <li><a href="/profile/team/add">Thêm đội bóng</a></li>
+                            <li><a href="/profile/team/list">Danh sách đội bóng</a></li>
+                        </ul>
+                    </li>
+                    <li class="player-dropdown">
+                        <a href="#">Cầu thủ</a>
+                        <ul class="dropdown-subcontent">
+                            <li><a href="/profile/player/add">Thêm cầu thủ</a></li>
+                            <li><a href="/profile/player/list">Danh sách cầu thủ</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -30,5 +48,4 @@
             </li>
         </ul>
     </nav>
-
 </header>
